@@ -1,0 +1,43 @@
+.panel{
+    background-size: auto 100%;
+    &_1{
+        background: url(https://uhdwallpapers.org/uploads/converted/19/11/27/the-cat-and-the-butterfly-1920x1080_477645-mm-90.webp) center/cover no-repeat;
+    }
+    &_2{
+        background: url(https://images4.alphacoders.com/266/266534.jpg) center/cover no-repeat;
+    }
+    &_3{
+        background: url(https://www.catbreedslist.com/cat-wallpapers/cat-wallpaper-cartoon-eyes-black-1920x1080.jpg) center/cover no-repeat;
+    }
+    &_4{
+        background: url(https://i.pinimg.com/originals/1f/03/7a/1f037acb4b17f226ac5d5bb093a69608.jpg) center/cover no-repeat;
+    }
+    &_5{
+        background: url(https://www.teahub.io/photos/full/48-489900_cat-desktop-wallpaper.jpg) center/cover no-repeat;
+    }
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    h3{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-100%);
+        visibility: hidden;
+        margin: 0;
+        opacity: 0;
+    }
+}
+.active{
+    flex: 5;
+    h3{
+        transform:translateX(-50%);
+        visibility: visible;
+        opacity: 1;
+        transition: 0.9s;
+    }
+}

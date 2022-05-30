@@ -1,0 +1,137 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+.panel_1 {
+  background: url(https://uhdwallpapers.org/uploads/converted/19/11/27/the-cat-and-the-butterfly-1920x1080_477645-mm-90.webp) center/cover no-repeat;
+}
+.panel_2 {
+  background: url(https://images4.alphacoders.com/266/266534.jpg) center/cover no-repeat;
+}
+.panel_3 {
+  background: url(https://www.catbreedslist.com/cat-wallpapers/cat-wallpaper-cartoon-eyes-black-1920x1080.jpg) center/cover no-repeat;
+}
+.panel_4 {
+  background: url(https://i.pinimg.com/originals/1f/03/7a/1f037acb4b17f226ac5d5bb093a69608.jpg) center/cover no-repeat;
+}
+.panel_5 {
+  background: url(https://www.teahub.io/photos/full/48-489900_cat-desktop-wallpaper.jpg) center/cover no-repeat;
+}
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-100%);
+  visibility: hidden;
+  margin: 0;
+  opacity: 0;
+}
+
+.active {
+  flex: 5;
+}
+.active h3 {
+  transform: translateX(-50%);
+  visibility: visible;
+  opacity: 1;
+  transition: 0.9s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel {
+    border-radius: 40px;
+  }
+  .panel:nth-of-type(4), .panel:nth-of-type(5) {
+    display: none;
+  }
+  .panel h3 {
+    font-size: 22px;
+  }
+}
